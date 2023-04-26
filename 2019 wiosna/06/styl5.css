@@ -1,0 +1,42 @@
+*{
+    font-family: Georgia;
+}
+
+#pierwszy, #drugi, #trzeci{
+    background-color: sienna;
+    color: white;
+    height: 150px;
+    float: left;
+}
+
+#pierwszy{
+    width: 40%;
+}
+
+#drugi{
+    width: 50%;
+    font-size: 150%;
+}
+
+#trzeci{
+    width: 10%;
+    text-align: center;
+}
+
+main{
+    background-color: tan;
+    padding: 100px;
+    clear: both;
+}
+
+a{
+    border: dashed 1px sienna;
+    background-color: tan;
+    color: sienna;
+    padding: 40px;
+    line-height: 150px;
+}
+
+li{
+   list-style: circle; 
+}

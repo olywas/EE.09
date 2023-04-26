@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Usługi fryzjerskie</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+
+<body>
+    <main>
+        <div id="lewy1">
+            <a href="index.html">
+                <h2>SALON FRYZJERSKI</h2>
+            </a>
+            <img src="obraz2.jpg" alt="Czesanie">
+        </div>
+
+        <div id="prawy1">
+            <h2>MENU</h2>
+        </div>
+
+        <div id="prawy2">
+            <ol>
+                <li>
+                    <a href="fryzura.html">Strzyżenie</a>
+                </li>
+                <ul>
+                    <li>krótkie</li>
+                    <li>średnie</li>
+                    <li>półdługie</li>
+                    <li>długie</li>
+                </ul>
+                <li>Czesanie</li>
+                <li>Koloryzacja</li>
+            </ol>
+        </div>
+
+        <div id="lewy2">
+            <h3>Dziś promocja na strzyżenie włosów</h3>
+            <form action="">
+                <label for="d1">Krótkie</label>
+                <input type="radio" name="wlosy" id="d1"><br>
+
+                <label for="d2">Średnie</label>
+                <input type="radio" name="wlosy" id="d2"><br>
+
+                <label for="d3">Półdługie</label>
+                <input type="radio" name="wlosy" id="d3"><br>
+
+                <label for="d4">Długie</label>
+                <input type="radio" name="wlosy" id="d4"><br>
+
+                <input type="button" value="Odkryj promocję" onclick="oblicz();">
+            </form>
+
+            <p id="wypisz"></p>
+        </div>
+
+        <div id="prawy3">
+            <img src="obraz1.jpg" alt="Fryzjer">
+        </div>
+    </main>
+
+    <footer>
+        <p>Autor: 00000000000000</p>
+    </footer>
+
+    <script>
+        function oblicz() {
+            var d1 = document.getElementById('d1').checked;
+            var d2 = document.getElementById('d2').checked;
+            var d3 = document.getElementById('d3').checked;
+            var d4 = document.getElementById('d4').checked;
+            var wypissz = document.getElementById('wypisz');
+            var cena = 0;
+
+            if (d1 == true) {
+                cena = cena + 25;
+            } else if (d2 == true) {
+                cena = cena + 30;
+            } else if (d3 == true) {
+                cena = cena + 40;
+            } else if (d4 == true) {
+                cena = cena + 50;
+            }
+
+            wypissz.innerHTML = 'Cena strzyżenia: ' + cena;
+        }
+    </script>
+</body>
+
+</html>

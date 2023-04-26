@@ -1,0 +1,55 @@
+*{
+    font-family: Georgia;
+}
+
+header{
+    background-color: #005B4F;
+    color: white;
+    text-align: center;
+    font-size: 50%;
+    height: 20px;
+    clear: both;
+}
+
+main{
+    background-color: #e1e2e1;
+    height: 400px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.zdjecie{
+    width: 20%;
+    float: left;
+}
+
+.opis{
+    float: left;
+}
+
+.linia{
+    clear: both;
+}
+
+#lewy, #prawy{
+    background-color: #005B4F;
+    color: white;
+    text-align: center;
+    width: 50%;
+    height: 20px;
+    float: left;
+}
+
+img{
+    padding: 20px;
+    border-radius: 100%;
+}
+
+h2{
+    text-align: center;
+    background-color: #00897B;
+}
+
+a{
+    color: white;
+}

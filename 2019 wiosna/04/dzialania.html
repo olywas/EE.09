@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Działania matematyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+
+
+<body>
+
+    <header>
+        <div id="pierwszy">
+            <img src="logo.jpg" alt="matemtyka">
+        </div>
+
+        <div id="drugi">
+            <h1>Pomocnik Matematyczny</h1>
+        </div>
+
+        <div id="trzeci">
+            <a href="dzialania.html">
+                <h4>Działania</h4>
+            </a>
+        </div>
+
+        <div id="czwarty">
+            <a href="mnozenie.html">
+                <h4>Tabliczka mnożenia</h4>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div id="lewy">
+
+            <h3>Proste działania</h3>
+            <form>
+                <label for="A">liczba A: </label><br>
+                <input type="text" name="A" id="A"><br>
+
+                <label for="B">liczba B: </label><br>
+                <input type="text" name="B" id="B"><br>
+
+                <input type="button" onclick="oblicz('+');" value="+" class="button">
+                <input type="button" onclick="oblicz('-');" value="-" class="button">
+                <input type="button" onclick="oblicz('*');" value="*" class="button">
+                <input type="button" onclick="oblicz('/');" value="/" class="button">
+                <input type="button" onclick="oblicz('potega')" value="A^B" class="button">
+
+            </form>
+
+            <p id="wypisz"></p>
+        </div>
+
+        <div id="prawy">
+            <ul>
+                <li>dodawanie</li>
+                <li>odejmowanie</li>
+                <li>mnożenie</li>
+                <li>dzielenie</li>
+                <li>potęgowanie</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>Autor: 00000000000</p>
+    </footer>
+
+    <script>
+        function oblicz(dzialanie) {
+            var a = parseInt(document.getElementById("A").value);
+            var b = parseInt(document.getElementById("B").value);
+            var wypisz = document.getElementById("wypisz");
+            var wynik = 0;
+
+            if (dzialanie == '+') {
+                wynik = a + b;
+            } else if (dzialanie == '-') {
+                wynik = a - b;
+            } else if (dzialanie == '*') {
+                wynik = a * b;
+            } else if (dzialanie == '/') {
+                wynik = a / b;
+            } else if (dzialanie == 'potega') {
+                wynik = Math.pow(a, b);
+            }
+
+            wypisz.innerHTML = 'Wynik: ' + wynik;
+        }
+    </script>
+</body>
+
+</html>

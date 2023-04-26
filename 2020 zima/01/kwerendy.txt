@@ -1,0 +1,7 @@
+SELECT `id`,`nazwa`,`wystepowanie` FROM `ryby` WHERE `styl_zycia` = 2;
+
+SELECT `akwen`,`wojewodztwo` FROM `lowisko` WHERE `rodzaj` = 2 OR `rodzaj` = 3;
+
+SELECT ryby.nazwa FROM ryby JOIN okres_ochronny ON ryby.id = okres_ochronny.Ryby_id WHERE okres_ochronny.do_miesiaca = 0;
+
+CREATE TABLE `wedkowanie`.`wedkarze` ( `id` INT NOT NULL AUTO_INCREMENT , `imie` TEXT, `nazwisko` TEXT, `punkty` INT, PRIMARY KEY (`id`)) ENGINE = InnoDB;

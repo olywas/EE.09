@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Usługi kosmetyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="lewy">
+            <h2>W ofercie</h2>
+
+            <ul>
+                <li>
+                    <a href="twarz.html">Zabiegi na twarz</a>
+                </li>
+                <ol>
+                    <li>Piling</li>
+                    <li>Maska</li>
+                    <li>Regulacja brwi</li>
+                </ol>
+                <li>Masaż</li>
+                <li>Diety oczyszczające</li>
+            </ul>
+
+            <a href="">Do strony głównej</a>
+        </div>
+        <div id="prawy">
+            <h1>Salon kosmetyczny</h1>
+        </div>
+    </header>
+
+    <main>
+        <div id="prawy">
+            <h2>Sprawdź cenę swojej wizyty</h2>
+
+            <form action="">
+                <label for="piling">Piling</label>
+                <input type="checkbox" name="piling" id="piling"><br>
+
+                <label for="maska">Maska</label>
+                <input type="checkbox" name="maska" id="maska"><br>
+
+                <label for="masaz">Masaż twarzy</label>
+                <input type="checkbox" name="masaz" id="masaz"><br>
+
+                <label for="regulacja">Regulacja brwi</label>
+                <input type="checkbox" name="regulacja" id="regulacja"><br>
+
+                <input type="button" value="Sprawdź cenę" onclick="oblicz();">
+            </form>
+
+            <p id="wypisz"></p>
+        </div>
+
+        <div id="lewy">
+            <img src="obraz1.jpg" alt="Kosmetyczka">
+        </div>
+    </main>
+
+    <footer>
+        <p>Autor: 000000000000</p>
+    </footer>
+
+    <script>
+        function oblicz() {
+            var piling = document.getElementById('piling').checked;
+            var maska = document.getElementById('maska').checked;
+            var masaz = document.getElementById('masaz').checked;
+            var regulacja = document.getElementById('regulacja').checked;
+            var wypisz = document.getElementById('wypisz');
+            var cena = 0;
+
+
+            if (piling == true) {
+                cena = cena + 45;
+            }
+
+            if (maska == true) {
+                cena = cena + 30;
+            }
+
+            if (masaz == true) {
+                cena = cena + 20;
+            }
+
+            if (regulacja == true) {
+                cena = cena + 5;
+            }
+
+            wypisz.innerHTML = 'Cena zabiegów: ' + cena;
+        }
+
+
+    </script>
+</body>
+
+</html>

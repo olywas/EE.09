@@ -1,0 +1,7 @@
+SELECT `id`,`dataWyjazdu`,`cel`,`cena` FROM `wycieczki` WHERE `dostepna` = '1';
+
+SELECT `nazwaPliku`,`podpis` FROM `zdjecia` ORDER BY `podpis` ASC;
+
+SELECT zdjecia.nazwaPliku, wycieczki.cel FROM `zdjecia` JOIN wycieczki ON zdjecia.id = wycieczki.zdjecia_id WHERE wycieczki.cena > 1000;
+
+ALTER TABLE `wycieczki` ADD `dataPrzyjazdu` DATE AFTER `dataWyjazdu`;
